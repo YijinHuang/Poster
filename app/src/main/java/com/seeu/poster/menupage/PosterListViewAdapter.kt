@@ -1,16 +1,18 @@
 package com.seeu.poster.menupage
 
 import android.content.Context
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.load.MultiTransformation
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.seeu.poster.R
 import com.seeu.poster.homepage.Poster
+import com.seeu.poster.tools.GlideApp
+import com.seeu.poster.tools.GlideRoundTransform
 import com.seeu.poster.tools.dateFormat
 
 /**
@@ -32,7 +34,10 @@ class PosterListViewAdapter(context: Context?,val resource: Int, objects: Mutabl
             viewHolder = view.tag as ViewHolder
         }
 
-        viewHolder.posterImage.setImageURI(Uri.parse(poster.imagePath))
+        GlideApp.with(context)
+                .load(poster.imagePath)
+                .transform(MultiTransformation(CenterCrop() ,GlideRoundTransform(4)))
+                .into(viewHolder.posterImage)
         viewHolder.posterTitle.text = poster.title
         val dateString = "${dateFormat.format(poster.beginDate)} 至 ${dateFormat.format(poster.endDate)}"
         viewHolder.posterDate.text = dateString

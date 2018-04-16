@@ -60,14 +60,6 @@ class PosterListPage(private val main: Main, private val posterListView: View) {
         posters.add(Poster("https://images5.alphacoders.com/912/912437.jpg", "Optogenetics", "生物医学工程系", dateFormat.parse("02-26 10:00"), dateFormat.parse("02-26 11:30")))
         posters.add(Poster("https://images4.alphacoders.com/912/912559.jpg", "基于虚拟区域方法的颗粒悬浮流直接数值模拟", "力学与航空航天系", dateFormat.parse("01-18 16:00"), dateFormat.parse("01-18 17:00"), true))
 
-
-//        posters.add(Poster("sdcard/ActivityPosters/lynk.jpg", "“礼”遇南科", "艺术中心", dateFormat.parse("03-01 19:00"), dateFormat.parse("03-30 19:00"), true))
-//        posters.add(Poster("sdcard/ActivityPosters/zshj.PNG", "致：我们或将失去的珊瑚礁", "DFCx潜爱交流会", dateFormat.parse("03-01 19:00"), dateFormat.parse("03-01 21:00")))
-//        posters.add(Poster("sdcard/ActivityPosters/tjh.jpg", "计算机科学与工程系推介会", "计算机系", dateFormat.parse("03-01 19:00"), dateFormat.parse("03-01 21:00")))
-//        posters.add(Poster("sdcard/ActivityPosters/gjzh.jpg", "高教纵横", "高等教育研究中心", dateFormat.parse("01-01 00:00"), dateFormat.parse("01-01 00:00"), true))
-//        posters.add(Poster("sdcard/LecturePosters/bio.jpg", "Optogenetics", "生物医学工程系", dateFormat.parse("02-26 10:00"), dateFormat.parse("02-26 11:30")))
-//        posters.add(Poster("sdcard/LecturePosters/lxjz.jpg", "基于虚拟区域方法的颗粒悬浮流直接数值模拟", "力学与航空航天系", dateFormat.parse("01-18 16:00"), dateFormat.parse("01-18 17:00"), true))
-
         listViewAdapter = PosterListViewAdapter(main, R.layout.poster_listview_item, posters)
         listView.adapter = listViewAdapter
     }

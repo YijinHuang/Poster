@@ -12,7 +12,7 @@ import android.view.WindowManager
  * @date 2018/2/25
  */
 
-class PostersViewPager(context: Context?, attrs: AttributeSet?) : ViewPager(context, attrs) {
+class PostersViewPager(context: Context, attrs: AttributeSet?) : ViewPager(context, attrs) {
     private val screenWidth: Int
     private val enableSwipeWidth: Int
     private var beginX: Int = 0
@@ -20,7 +20,7 @@ class PostersViewPager(context: Context?, attrs: AttributeSet?) : ViewPager(cont
 
     init {
         val metrics = DisplayMetrics()
-        val manager = context?.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        val manager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         manager.defaultDisplay.getMetrics(metrics)
         screenWidth = metrics.widthPixels
         enableSwipeWidth = (screenWidth * 0.9).toInt()

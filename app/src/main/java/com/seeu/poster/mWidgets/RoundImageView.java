@@ -7,8 +7,8 @@ import android.graphics.Path;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.seeu.poster.R;
 
 /**
@@ -16,7 +16,7 @@ import com.seeu.poster.R;
  * @date 2018/3/3
  */
 
-public class RoundImageView extends SimpleDraweeView {
+public class RoundImageView extends ImageView {
     private TypedArray attr;
     private int radius;
     private boolean isCropped;
