@@ -1,8 +1,8 @@
-### Poster (incomplete)
+# Poster (incomplete)
 
 The android application to update and browse posters in SUSTech
 
-#### Detail
+## Detail
 
 - Android api: `Android 8.0(Oreo)`
 - Language: `Kotlin 1.1.51`
