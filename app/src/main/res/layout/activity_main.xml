@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.seeu.poster.mWidgets.ViewGroupWithMenu
+        android:id="@+id/viewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/homepage"
+            layout="@layout/homepage" />
+
+        <include
+            android:id="@+id/menu"
+            layout="@layout/menu" />
+
+    </com.seeu.poster.mWidgets.ViewGroupWithMenu>
+
+</android.support.constraint.ConstraintLayout>

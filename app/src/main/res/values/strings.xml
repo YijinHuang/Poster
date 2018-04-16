@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Poster</string>
+    <string name="initialNum">0</string>
+    <string name="separator">/</string>
+    <string name="account">未登录</string>
+    <string name="about">关于我们</string>
+    <string name="setting">设置</string>
+    <string name="upload_poster">上传海报</string>
+    <string name="history">历史海报</string>
+    <string name="favourite">我想参加</string>
+    <string name="use_mobile_data">流量下显示图片</string>
+    <string name="auto_alarm">我想参加的活动自动设置闹钟</string>
+    <string name="pop_message">消息推送</string>
+    <string name="current_version">0.0.1</string>
+    <string name="check_upgrade">检查更新</string>
+    <string name="current_version_string">当前版本</string>
+    <string name="clear_cache">清理缓存</string>
+
+    <drawable name="clr_normal">#00FFFFFF</drawable>
+</resources>

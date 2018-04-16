@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="#FAFAFA"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/symbols_material_icons_black_arrow_back" />
+
+    <TextView
+        android:id="@+id/page_title_string"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:textColor="@color/first_text_color"
+        android:textSize="18sp" />
+
+</LinearLayout>
