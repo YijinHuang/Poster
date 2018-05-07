@@ -2,6 +2,8 @@ package com.seeu.poster.homepage
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -85,7 +87,8 @@ class PosterViewPagerAdapter(private val main: Main, private val posters: List<P
         val view = LayoutInflater.from(main).inflate(R.layout.poster_viewpager_item, null)
         val img = view.findViewById<ImageView>(R.id.viewpager_poster)
         img.setOnClickListener {
-            toDetail(poster)
+            if (main.viewPager.isEnableSwiping)
+                toDetail(poster)
         }
         GlideApp.with(main)
                 .load(poster.imagePath)
@@ -122,6 +125,7 @@ class PosterViewPagerAdapter(private val main: Main, private val posters: List<P
         }
         GlideApp.with(main)
                 .load(poster.imagePath)
+                .placeholder(ColorDrawable(Color.LTGRAY))
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(detailImg)
         main.onDetailPage = true

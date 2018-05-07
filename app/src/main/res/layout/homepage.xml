@@ -9,41 +9,55 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#727272">
+        android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/change_poster_type"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="#727272"
-            android:padding="5dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/symbols_icons_shuffle" />
-
-        <TextView
-            android:id="@+id/poster_type"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp" />
+            android:background="#727272">
 
-        <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/menu"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="#727272"
-            android:padding="5dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/symbols_material_icons_black_menu" />
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/change_poster_type"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="#727272"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/symbols_icons_shuffle" />
+
+            <TextView
+                android:id="@+id/poster_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/menu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="#727272"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/symbols_material_icons_black_menu" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:alpha="100"
+            android:background="@drawable/shadow" />
 
     </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -52,45 +66,45 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="top"
             android:orientation="vertical"
-            android:weightSum="1"
-            android:gravity="top">
+            android:weightSum="1">
 
             <com.seeu.poster.homepage.PostersViewPager
                 android:id="@+id/poster_views"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.8"
-                android:layout_marginTop="100dp">
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.8">
 
             </com.seeu.poster.homepage.PostersViewPager>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_marginTop="40dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/poster_holder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:textColor="#333"
-                    android:textSize="16sp"
+                    android:ellipsize="end"
                     android:singleLine="true"
-                    android:ellipsize="end"/>
+                    android:textColor="#333"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/poster_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#333"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:ellipsize="end"
                     android:singleLine="true"
-                    android:ellipsize="end" />
+                    android:textColor="#333"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

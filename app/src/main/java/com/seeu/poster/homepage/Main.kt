@@ -34,7 +34,7 @@ class Main : AppCompatActivity() {
     private lateinit var settingPage: SettingPage
 
     private lateinit var viewGroup: ViewGroupWithMenu
-    private lateinit var viewPager: PostersViewPager
+    lateinit var viewPager: PostersViewPager
 
     //widgets in homepage
     private lateinit var title: TextView
@@ -204,6 +204,11 @@ class Main : AppCompatActivity() {
             }
             else -> super.onBackPressed()
         }
+    }
+
+    override fun onStop() {
+        settingPage.editor.commit()
+        super.onStop()
     }
 
     inner class LoadPostersThread : Thread() {

@@ -1,5 +1,7 @@
 package com.seeu.poster.menupage
 
+import android.content.Context
+import android.graphics.Color
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
@@ -19,9 +21,8 @@ class SettingPage(private val main: Main, private val settingView: View) {
     private val textClearCache: TextView
     private val textCheckUpgrade: TextView
 
-    val allowPopMessage: Boolean = true
-    val allowAutoAlarm: Boolean = false
-    val allowUseMobileDate: Boolean = false
+    private val sp = main.getSharedPreferences("preference", Context.MODE_PRIVATE)
+    val editor = sp.edit()
 
     init {
         //Initial page title
@@ -38,11 +39,38 @@ class SettingPage(private val main: Main, private val settingView: View) {
         btPopMessage = settingView.findViewById(R.id.pop_message_button)
         btAutoAlarm = settingView.findViewById(R.id.auto_alarm_button)
         btUseMobileData = settingView.findViewById(R.id.use_mobile_data_button)
-        btPopMessage.isChecked = allowPopMessage
-        btAutoAlarm.isChecked = allowAutoAlarm
-        btUseMobileData.isChecked = allowUseMobileDate
 
         textClearCache = settingView.findViewById(R.id.clear_cache)
         textCheckUpgrade = settingView.findViewById(R.id.check_upgrade)
+
+        initialButton()
+    }
+
+    private fun initialButton() {
+        val allowPopMessage = sp.getBoolean("allowPopMessage", true)
+        btPopMessage.isChecked = allowPopMessage
+        if (allowPopMessage) {
+            btAutoAlarm.isChecked = sp.getBoolean("allowAutoAlarm", false)
+        } else {
+            btAutoAlarm.isEnabled = false
+        }
+        btUseMobileData.isChecked = sp.getBoolean("allowUseMobileDate", false)
+
+        btPopMessage.setOnCheckedChangeListener{
+            view, isChecked -> editor.putBoolean("allowPopMessage", isChecked)
+            if (!isChecked) {
+                btAutoAlarm.isChecked = false
+                btAutoAlarm.isEnabled = false
+                editor.putBoolean("allowAutoAlarm", false)
+            } else {
+                btAutoAlarm.isEnabled = true
+            }
+        }
+        btAutoAlarm.setOnCheckedChangeListener{
+            view, isChecked -> editor.putBoolean("allowAutoAlarm", isChecked)
+        }
+        btUseMobileData.setOnCheckedChangeListener{
+            view, isChecked -> editor.putBoolean("allowUseMobileDate", isChecked)
+        }
     }
 }

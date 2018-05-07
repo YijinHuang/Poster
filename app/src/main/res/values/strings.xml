@@ -9,7 +9,7 @@
     <string name="history">历史海报</string>
     <string name="favourite">我想参加</string>
     <string name="use_mobile_data">流量下显示图片</string>
-    <string name="auto_alarm">我想参加的活动自动设置闹钟</string>
+    <string name="auto_alarm">为我想参加的活动设置提醒</string>
     <string name="pop_message">消息推送</string>
     <string name="current_version">0.0.1</string>
     <string name="check_upgrade">检查更新</string>
