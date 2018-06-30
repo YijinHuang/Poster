@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/account"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/DarkText"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/favourite"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/DarkText"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/history"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/DarkText"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/upload_poster"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/DarkText"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -169,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/setting"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/DarkText"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -198,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/about"
-                    android:textColor="#1A1A1A"
+                    android:textColor="@color/DarkText"
                     android:textSize="14sp" />
 
             </LinearLayout>

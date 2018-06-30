@@ -22,6 +22,14 @@ import com.seeu.poster.menupage.SettingPage
 import com.seeu.poster.tools.StatusBarCompat
 import com.seeu.poster.tools.dateFormat
 import java.util.*
+import android.app.PendingIntent
+import android.app.Activity
+import android.app.Notification
+import android.app.NotificationManager
+import android.content.Context
+import android.content.Intent
+import android.support.annotation.RequiresApi
+
 
 class Main : AppCompatActivity() {
     lateinit var mainView: View
@@ -29,6 +37,7 @@ class Main : AppCompatActivity() {
     lateinit var settingView: View
     lateinit var detailView: View
     lateinit var photoView: View
+    lateinit var aboutView: View
 
     private lateinit var posterListPage: PosterListPage
     private lateinit var settingPage: SettingPage
@@ -62,6 +71,7 @@ class Main : AppCompatActivity() {
         settingView = LayoutInflater.from(this).inflate(R.layout.setting_page, null)
         detailView = LayoutInflater.from(this).inflate(R.layout.detail_page, null)
         photoView = LayoutInflater.from(this).inflate(R.layout.photoview_page, null)
+        aboutView = LayoutInflater.from(this).inflate(R.layout.about_page, null)
         photoView.setBackgroundColor(MColor.MBLACK.rgb)
         setContentView(mainView)
         loadHomepage()
@@ -119,6 +129,7 @@ class Main : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     private fun initialMenu() {
         val entryToAccount = findViewById<LinearLayout>(R.id.menu_accout_entry)
         val entryToFavourite = findViewById<LinearLayout>(R.id.menu_favourite_entry)
@@ -145,6 +156,13 @@ class Main : AppCompatActivity() {
 
         entryToSetting.setOnClickListener {
             setContentView(settingView)
+            onOtherPage = true
+        }
+
+        entryToAbout.setOnClickListener {
+            setContentView(aboutView)
+            val pageTitle = aboutView.findViewById<TextView>(R.id.page_title_string)
+            pageTitle.text = this.getText(R.string.about)
             onOtherPage = true
         }
     }
