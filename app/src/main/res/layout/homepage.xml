@@ -58,6 +58,18 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:adjustViewBounds="true"
+            android:src="@drawable/homepage_bg" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -143,5 +155,4 @@
             android:text="@string/initialNum"
             android:textColor="@color/second_text_color" />
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

@@ -20,65 +20,65 @@
             android:background="@drawable/setting_item_background"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/setting_row_height"
-                android:gravity="center_vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/setting_row_height"-->
+                <!--android:gravity="center_vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginStart="20dp"
-                    android:text="@string/pop_message"
-                    android:textColor="@color/first_text_color"
-                    android:textSize="15sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:text="@string/pop_message"-->
+                    <!--android:textColor="@color/first_text_color"-->
+                    <!--android:textSize="15sp" />-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="20dp"
-                    android:gravity="end">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginEnd="20dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="end">-->
 
-                    <com.suke.widget.SwitchButton
-                        android:id="@+id/pop_message_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <!--<com.suke.widget.SwitchButton-->
+                        <!--android:id="@+id/pop_message_button"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/setting_row_height"
-                android:gravity="center_vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/setting_row_height"-->
+                <!--android:gravity="center_vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginStart="20dp"
-                    android:text="@string/auto_alarm"
-                    android:textColor="@color/first_text_color"
-                    android:textSize="15sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:text="@string/auto_alarm"-->
+                    <!--android:textColor="@color/first_text_color"-->
+                    <!--android:textSize="15sp" />-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="20dp"
-                    android:gravity="end">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginEnd="20dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="end">-->
 
-                    <com.suke.widget.SwitchButton
-                        android:id="@+id/auto_alarm_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <!--<com.suke.widget.SwitchButton-->
+                        <!--android:id="@+id/auto_alarm_button"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"

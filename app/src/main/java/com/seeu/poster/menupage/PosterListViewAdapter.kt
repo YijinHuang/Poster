@@ -10,6 +10,8 @@ import android.widget.TextView
 import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.seeu.poster.R
+import com.seeu.poster.detailpage.DetailPage
+import com.seeu.poster.homepage.Main
 import com.seeu.poster.homepage.Poster
 import com.seeu.poster.tools.GlideApp
 import com.seeu.poster.tools.GlideRoundTransform
@@ -19,7 +21,9 @@ import com.seeu.poster.tools.dateFormat
  * @author Gotcha
  * @date 2018/2/25
  */
-class PosterListViewAdapter(context: Context?,val resource: Int, objects: MutableList<Poster>?) : ArrayAdapter<Poster>(context, resource, objects) {
+class PosterListViewAdapter(private val main: Main, val resource: Int, objects: MutableList<Poster>?) : ArrayAdapter<Poster>(main, resource, objects) {
+    private val detailPage = DetailPage(main)
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val poster = getItem(position)
         val view: View
@@ -32,6 +36,10 @@ class PosterListViewAdapter(context: Context?,val resource: Int, objects: Mutabl
         } else {
             view = convertView
             viewHolder = view.tag as ViewHolder
+        }
+
+        view.setOnClickListener {
+            detailPage.toDetail(poster)
         }
 
         GlideApp.with(context)
